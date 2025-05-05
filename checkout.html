@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<nav class="navbar navbar-expand-lg navbar-dark bg-danger px-4 py-3">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="index.html" style="font-size: 1.8rem;">
+      <span style="background-color: white; color: red; padding: 2px 5px; border-radius: 3px;">americanas</span>
+    </a>
+    <form class="d-flex mx-auto" role="search" style="width: 50%;">
+      <input class="form-control me-2" type="search" placeholder="busque aqui seu produto" aria-label="Search">
+      <button class="btn btn-light" type="submit">
+        <i class="bi bi-search"></i>
+      </button>
+    </form>
+    <div class="text-white">
+      <a href="#" class="text-white text-decoration-none me-1">faça seu login</a>
+      <span>ou</span>
+      <a href="#" class="text-white text-decoration-none ms-1">cadastre-se</a>
+    </div>
+  </div>
+</nav>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout - Minha Loja</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    header {
+      background-color: #e60014;
+    }
+
+    .logo {
+      color: white;
+      font-weight: bold;
+      font-size: 1.5rem;
+      text-decoration: none;
+    }
+
+    .checkout-form {
+      max-width: 600px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔺 Cabeçalho -->
+  <header class="py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a href="#" class="logo">americanas</a>
+      <form class="d-flex w-50">
+        <input class="form-control me-2" type="search" placeholder="busque aqui seu produto">
+        <button class="btn btn-light" type="submit">🔍</button>
+      </form>
+      <div class="text-white">
+        <a href="#" class="text-white text-decoration-none me-2">faça seu login</a> ou
+        <a href="#" class="text-white text-decoration-none ms-1">cadastre-se</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 🔻 Conteúdo principal: formulário de checkout -->
+  <main class="container my-5">
+    <h2 class="mb-4 text-center">Finalizar Compra</h2>
+
+    <form class="checkout-form border p-4 rounded shadow-sm bg-white">
+      <div class="mb-3">
+        <label class="form-label">número do cartão</label>
+        <input type="text" class="form-control" placeholder="0000 0000 0000 0000">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">número de parcelas</label>
+        <select class="form-select">
+          <option selected>Em quantas parcelas deseja pagar?</option>
+          <option>1x sem juros</option>
+          <option>2x sem juros</option>
+          <option>3x sem juros</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">nome impresso no cartão</label>
+        <input type="text" class="form-control">
+      </div>
+
+      <div class="row mb-3">
+        <div class="col">
+          <label class="form-label">validade - mês</label>
+          <select class="form-select">
+            <option>01</option><option>02</option><option>03</option><option>04</option>
+            <option>05</option><option>06</option><option>07</option><option>08</option>
+            <option>09</option><option>10</option><option>11</option><option>12</option>
+          </select>
+        </div>
+        <div class="col">
+          <label class="form-label">validade - ano</label>
+          <select class="form-select">
+            <option>2025</option><option>2026</option><option>2027</option><option>2028</option>
+            <option>2029</option><option>2030</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">código de segurança</label>
+        <input type="text" class="form-control" placeholder="123">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">cpf do titular</label>
+        <input type="text" class="form-control" placeholder="999.999.999-99">
+      </div>
+
+      <button type="submit" class="btn btn-danger w-100">Finalizar Pagamento</button>
+    </form>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -32,14 +32,3 @@
 .nav-sec-links a:hover {
   opacity: 0.8;
 }
-<head>
-  <style>
-    .botao-comprar {
-      font-size: 1.5rem;
-      padding: 15px 30px;
-    }
-  </style>
-</head>
-<body>
-  <button class="btn btn-danger botao-comprar">Comprar</button>
-</body>

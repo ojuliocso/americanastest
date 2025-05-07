@@ -155,83 +155,133 @@
     </div>
   </div>
 
-  <!-- Banner principal -->
-<div class="container my-4">
-  <img src="banner.png" alt="Banner promocional" class="img-fluid w-100 rounded">
-</div>
-<!-- Seção de Ofertas Imperdíveis -->
-<div class="container my-5">
-  <h4 class="fw-bold mb-4">ofertas imperdíveis</h4>
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
-
-    <!-- Produto 1 -->
-    <div class="col">
-      <a href="iphone14.html" class="text-decoration-none text-dark">
-        <div class="card h-100 shadow-sm">
-          <img src="iphone-principal.png" class="card-img-top" alt="Produto 1">
-          <div class="card-body">
-            <span class="badge bg-light text-secondary mb-2">patrocinado</span>
-            <p class="card-title fw-semibold">Apple iPhone 14 128GB iOS 5G Wi-Fi Tela 6.1" Câmera Dupla 12MP - Meia Noite</p>
-            <div class="mb-2 text-warning">★★★★★</div>
-            <p class="fw-bold">R$ 2.299,90</p>
-          </div>
-        </div>
-      </a>
-    </div>
-
-    <!-- Produto 2 -->
-    <div class="col">
-      <a href="smarttv.html" class="text-decoration-none text-dark">
-        <div class="card h-100 shadow-sm">
-          <img src="smarttv-principal.png" class="card-img-top" alt="Produto 2">
-          <div class="card-body">
-            <span class="badge bg-light text-secondary mb-2">patrocinado</span>
-            <p class="card-title fw-semibold">Smart TV UN75DU7700GXZD 75 Polegadas uhd 4K Samsung</p>
-            <div class="mb-2 text-warning">★★★★☆ <span class="text-muted" style="font-size: 0.9rem;"></span></div>
-            <p class="fw-bold">R$ 1.899,90</p>
-          </div>
-        </div>
-      </a>
-    </div>	
-
-    <!-- Produto 3 -->
-    <div class="col">
-      <a href="geladeira.html" class="text-decoration-none text-dark">
-        <div class="card h-100 shadow-sm">
-          <img src="geladeira-principal.png" class="card-img-top" alt="Produto 3">
-          <div class="card-body">
-            <span class="badge bg-light text-secondary mb-2">patrocinado</span>
-            <p class="card-title fw-semibold">Geladeira Brastemp BRO85AK Frost Free Side Inverse 3 Portas A+++ 554 Litros Inox</p>
-            <div class="mb-2 text-warning">★★★★★</div>
-            <p class="fw-bold">R$ 1.899,90</p>
-          </div>
-        </div>
-      </a>
-    </div>
-
-    <!-- Produto 4 -->
-    <div class="col">
-      <a href="lavadora.html" class="text-decoration-none text-dark">
-        <div class="card h-100 shadow-sm">
-          <img src="lavadora-principal.png" class="card-img-top" alt="Produto 4">
-          <div class="card-body">
-            <span class="badge bg-light text-secondary mb-2">patrocinado</span>
-            <p class="card-title fw-semibold">Lavadora Smart LG VC5 FV3011WG4 11kg com Inteligência Artificial Branco - 110v</p>
-            <div class="mb-2 text-warning">★★★★★</div>
-            <p class="fw-bold">R$ 899,90</p>
-          </div>
-        </div>
-      </a>
-    </div>
-
-  </div>
-</div>
-
-
-
+  <!-- Seção do Produto -->
+  <section class="container my-5">
+    <div class="row g-4">
+      <!-- Imagem principal -->
+      <div class="col-md-6 text-center">
    
 
+<!-- Imagem principal -->
+<img id="mainImage" src="lavadora-principal.png" class="img-fluid mb-3 zoomable" alt="iPhone 14">
+
+
+<!-- Miniaturas clicáveis -->
+<div class="d-flex justify-content-center gap-2">
+  <img src="thumblav1.png" class="img-thumbnail thumb" data-img="thumblav1.png" style="width: 60px;" alt="thumb 1">
+  <img src="thumblav2.png" class="img-thumbnail thumb" data-img="thumblav2.png" style="width: 60px;" alt="thumb 2">
+  <img src="thumblav3.png" class="img-thumbnail thumb" data-img="thumblav3.png" style="width: 60px;" alt="thumb 3">
+ 
+</div>
+
+
+      </div>
+
+      <!-- Detalhes do produto -->
+      <div class="col-md-6">
+        <h4>Lavadora Smart LG VC5 FV3011WG4 11kg com Inteligência Artificial Branco - 110v
+</h4>
+        <div class="mb-2 text-warning">
+          ★★★★★ <small class="text-muted">39 avaliações</small>
+        </div>
+        <p><strong>A  Lavadora Smart LG VC5 FV3011WG4 11kg</strong> vai deixar a sua rotina de cuidados com a casa ainda mais facilitada.</p>
+
+       <a href="#ficha-tecnica" class="btn btn-outline-danger">ver mais</a>
+
+
+        <div class="mb-3">
+          <span><strong>Voltagem:</strong></span>
+          <div class="mt-2 border rounded p-2 d-inline-block text-center">
+            <div class="text-primary mt-1">bivolt</div>
+          </div>
+        </div>
+
+        <div class="bg-light p-3 rounded mb-3">
+          <p class="text-muted mb-0" style="text-decoration: line-through;">R$ 2.795,00</p>
+          <h4 class="text-danger mb-0">R$ 899,90 <span class="badge bg-success">65%</span></h4>
+          <small>R$ 1078,80 em até 12x de R$ 89.90</small>
+        </div>
+
+        <div class="mb-3">
+  <label class="form-label">calcular frete e prazo</label>
+  <div class="input-group">
+    <input type="text" class="form-control" placeholder="digite seu CEP" id="cepInput">
+    <button class="btn btn-outline-danger" id="cepBtn">ok</button>
+  </div>
+  <div id="cepResultado" class="mt-2 text-muted"></div>
+</div>
+
+     <div class="d-flex align-items-center my-3">
+  <button class="btn btn-outline-secondary" id="decrement">–</button>
+  <input type="text" id="quantidade" class="form-control mx-2 text-center" style="width: 60px;" value="1" readonly>
+  <button class="btn btn-outline-secondary" id="increment">+</button>
+</div>
+
+<a href="checkout.html" class="btn btn-danger btn-lg w-100 py-3 fw-bold">
+  <i class="bi bi-bag-fill me-2"></i>comprar
+</a>
+
+
+
+        <small class="d-block mt-2 text-muted">
+          Este produto é vendido por <strong>americanas</strong><br>
+          A Americanas garante a sua compra, do pedido à entrega. <a href="#">saiba mais</a>
+        </small>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+  document.querySelectorAll('.thumb').forEach(function(thumbnail) {
+    thumbnail.addEventListener('click', function() {
+      const newSrc = this.getAttribute('data-img');
+      document.getElementById('mainImage').src = newSrc;
+    });
+  });
+</script>
 <script>
+  document.getElementById('cepBtn').addEventListener('click', function () {
+    const cep = document.getElementById('cepInput').value.replace(/\D/g, '');
+    const resultado = document.getElementById('cepResultado');
+
+    if (cep.length !== 8) {
+      resultado.textContent = 'CEP inválido. Digite os 8 números.';
+      return;
+    }
+
+    resultado.textContent = 'Buscando...';
+
+    fetch(`https://viacep.com.br/ws/${cep}/json/`)
+      .then(response => response.json())
+      .then(data => {
+        if (data.erro) {
+          resultado.textContent = 'CEP não encontrado.';
+        } else {
+          resultado.textContent = `Endereço: ${data.logradouro} ${data.bairro}  ${data.localidade}/${data.uf}`;
+        }
+      })
+      .catch(() => {
+        resultado.textContent = 'Erro ao buscar o CEP. Tente novamente.';
+      });
+  });
+</script>
+<section id="ficha-tecnica" class="container my-5">
+  <h3 class="mb-4">Ficha Técnica</h3>
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <tbody>
+        <tr><th>Fabricante</th><td>LG</td></tr>
+        <tr><th>Garantia (meses)</th><td>12</td></tr>
+        <tr><th>Modelo</th><td>	FV3011WG4A.ABWGBRS</td></tr>
+        <tr><th>Tipo de abertura (carga) </th><td>Frontal</td></tr>
+        <tr><th>Capacidade</th><td>11kg</td></tr>
+        <tr><th>Voltagem</th><td>Bivolt</td></tr>
+
+<script>
+
+
+
   document.addEventListener('DOMContentLoaded', function () {
     const btnMais = document.getElementById('increment');
     const btnMenos = document.getElementById('decrement');

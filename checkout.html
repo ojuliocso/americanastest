@@ -1,68 +1,145 @@
-<!DOCTYPE html>
+
 <html lang="pt-br">
 <head>
-<nav class="navbar navbar-expand-lg navbar-dark bg-danger px-4 py-3">
-  <div class="container-fluid">
-    <a class="navbar-brand fw-bold" href="index.html" style="font-size: 1.8rem;">
-      <span style="background-color: white; color: red; padding: 2px 5px; border-radius: 3px;">americanas</span>
-    </a>
-    <form class="d-flex mx-auto" role="search" style="width: 50%;">
-      <input class="form-control me-2" type="search" placeholder="busque aqui seu produto" aria-label="Search">
-      <button class="btn btn-light" type="submit">
-        <i class="bi bi-search"></i>
-      </button>
-    </form>
-    <div class="text-white">
-      <a href="#" class="text-white text-decoration-none me-1">faça seu login</a>
-      <span>ou</span>
-      <a href="#" class="text-white text-decoration-none ms-1">cadastre-se</a>
-    </div>
-  </div>
-</nav>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Checkout - Minha Loja</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Americanas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <style>
     body {
-      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
     }
 
-    header {
+    .top-bar {
       background-color: #e60014;
+      padding: 10px 0;
     }
 
-    .logo {
+    .top-bar img {
+      height: 58px;
+    }
+
+    .search-box {
+      position: relative;
+      flex-grow: 1;
+    }
+
+    .search-box input {
+      border-radius: 10px;
+      padding: 10px 45px 10px 15px;
+      border: none;
+      width: 100%;
+    }
+
+    .search-box button {
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: transparent;
+      border: none;
+      color: #e60014;
+      font-size: 18px;
+    }
+
+    .icon-set a {
       color: white;
-      font-weight: bold;
-      font-size: 1.5rem;
       text-decoration: none;
+      font-size: 20px;
+      margin-left: 20px;
+      display: flex;
+      align-items: center;
     }
 
-    .checkout-form {
-      max-width: 600px;
-      margin: auto;
+    .icon-set a span {
+      font-size: 12px;
+      margin-left: 6px;
+      display: inline-block;
+      line-height: 1.1;
+      text-align: left;
     }
+
+    .icon-set .user-text {
+      font-size: 12px;
+      color: white;
+      margin-right: 8px;
+      line-height: 1.1;
+    }
+
+    .cart-icon {
+      position: relative;
+    }
+
+    .cart-icon::after {
+      content: "0";
+      position: absolute;
+      top: -6px;
+      right: -10px;
+      background-color: white;
+      color: #e60014;
+      font-size: 10px;
+      font-weight: bold;
+      border-radius: 50%;
+      padding: 2px 5px;
+    }
+	<style>
+  /* ... seus estilos anteriores ... */
+
+  .zoomable {
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
+  max-width: 100%;
+  max-height: 100%;
+  display: inline-block;
+}
+
+.zoomable:hover {
+  transform: scale(1.05);
+  z-index: 10;
+  position: relative;
+}
+
+</style>
+
   </style>
+  <style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+
 </head>
 <body>
+<div style="width: 100%; background-color: #f2f2f2;">
+  <img src="banner-maes.png" alt="banner dia das mães" style="width: 100%; display: block;" />
+</div>
 
-  <!-- 🔺 Cabeçalho -->
-  <header class="py-3">
+
+  <!-- Top Header -->
+  <header class="top-bar">
     <div class="container d-flex justify-content-between align-items-center">
-      <a href="#" class="logo">americanas</a>
-      <form class="d-flex w-50">
-        <input class="form-control me-2" type="search" placeholder="busque aqui seu produto">
-        <button class="btn btn-light" type="submit">🔍</button>
-      </form>
-      <div class="text-white">
-        <a href="#" class="text-white text-decoration-none me-2">faça seu login</a> ou
-        <a href="#" class="text-white text-decoration-none ms-1">cadastre-se</a>
+      <a href="#"><img src="logo-americanas-sem-fundo.png" alt="Logo Americanas"></a>
+
+      <div class="mx-3 search-box">
+        <input type="text" placeholder="busque aqui seu produto" class="form-control" />
+        <button><i class="bi bi-search"></i></button>
+      </div>
+
+      <div class="icon-set d-flex align-items-center">
+        <div class="user-text text-white me-2 text-end">
+          olá, faça<br><strong>seu login</strong><br><strong>ou cadastre-se</strong>
+        </div>
+        <a href="#"><i class="bi bi-person-circle"></i></a>
+        <a href="#"><i class="bi bi-shop"></i></a>
+        <a href="#"><i class="bi bi-heart"></i></a>
+        <a href="#" class="cart-icon"><i class="bi bi-basket"></i></a>
       </div>
     </div>
   </header>
-
   <!-- 🔻 Conteúdo principal: formulário de checkout -->
   <main class="container my-5">
     <h2 class="mb-4 text-center">Finalizar Compra</h2>
@@ -79,7 +156,14 @@
           <option selected>Em quantas parcelas deseja pagar?</option>
           <option>1x sem juros</option>
           <option>2x sem juros</option>
-          <option>3x sem juros</option>
+          <option>4x sem juros</option>
+		  <option>5x sem juros</option>
+		  <option>6x sem juros</option>
+		  <option>7x sem juros</option>
+		  <option>8x sem juros</option>
+		  <option>9x sem juros</option>
+		  <option>10x sem juros</option>
+		  
         </select>
       </div>
 

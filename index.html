@@ -18,7 +18,7 @@
     }
 
     .top-bar img {
-      height: 38px;
+      height: 58px;
     }
 
     .search-box {
@@ -27,7 +27,7 @@
     }
 
     .search-box input {
-      border-radius: 20px;
+      border-radius: 10px;
       padding: 10px 45px 10px 15px;
       border: none;
       width: 100%;
@@ -104,8 +104,20 @@
 </style>
 
   </style>
+  <style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+
 </head>
 <body>
+<div style="width: 100%; background-color: #f2f2f2;">
+  <img src="banner-maes.png" alt="banner dia das mães" style="width: 100%; display: block;" />
+</div>
+
 
   <!-- Top Header -->
   <header class="top-bar">
@@ -173,10 +185,11 @@
         </div>
         <p><strong>O iPhone 14</strong> tem o sistema de câmera dupla mais impressionante em um iPhone, para fazer fotos espetaculares com pouca e muita luz. E você ganha tranquilidade com nosso novo recurso essencial de segurança.</p>
 
-        <a href="#" class="d-block mb-2 text-decoration-underline">mais informações</a>
+       <a href="#ficha-tecnica" class="btn btn-outline-danger">ver mais</a>
+
 
         <div class="mb-3">
-          <span><strong>cor:</strong> azul</span>
+          <span><strong>cor:</strong></span>
           <div class="mt-2 border rounded p-2 d-inline-block text-center">
             <div class="text-primary mt-1">azul</div>
           </div>
@@ -197,16 +210,16 @@
   <div id="cepResultado" class="mt-2 text-muted"></div>
 </div>
 
-        <div class="mb-3">
-          <label class="form-label">quantidade:</label>
-          <div class="input-group" style="width: 160px;">
-            <button class="btn btn-outline-secondary">-</button>
-            <input type="text" class="form-control text-center" value="1 unidade">
-            <button class="btn btn-outline-secondary">+</button>
-          </div>
-        </div>
+     <div class="d-flex align-items-center my-3">
+  <button class="btn btn-outline-secondary" id="decrement">–</button>
+  <input type="text" id="quantidade" class="form-control mx-2 text-center" style="width: 60px;" value="1" readonly>
+  <button class="btn btn-outline-secondary" id="increment">+</button>
+</div>
 
-        <a href="checkout.html" class="btn btn-danger">comprar</a>
+<a href="checkout.html" class="btn btn-danger btn-lg w-100 py-3 fw-bold">
+  <i class="bi bi-bag-fill me-2"></i>comprar
+</a>
+
 
 
         <small class="d-block mt-2 text-muted">
@@ -250,6 +263,47 @@
       .catch(() => {
         resultado.textContent = 'Erro ao buscar o CEP. Tente novamente.';
       });
+  });
+</script>
+<section id="ficha-tecnica" class="container my-5">
+  <h3 class="mb-4">Ficha Técnica</h3>
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <tbody>
+        <tr><th>Fabricante</th><td>Apple Computer Brasil</td></tr>
+        <tr><th>Garantia (meses)</th><td>12</td></tr>
+        <tr><th>Código de homologação (ANATEL)</th><td>10987-22-01993</td></tr>
+        <tr><th>Resolução da tela</th><td>2532 x 1170 pixels a 460 ppi</td></tr>
+        <tr><th>Tipo de tela</th><td>Super Retina XDR com ProMotion</td></tr>
+        <tr><th>Câmera frontal</th><td>12MP</td></tr>
+        <tr><th>Câmera traseira</th><td>12MP</td></tr>
+        <tr><th>Sistema operacional</th><td>Iphone IOS</td></tr>
+        <tr><th>Processador</th><td>A15</td></tr>
+        <tr><th>Memória RAM</th><td>Não Se Aplica</td></tr>
+        <tr><th>Memória expansível</th><td>Não</td></tr>
+        <tr><th>Tipo de chip</th><td>Nano Chip</td></tr>
+        <tr><th>NFC</th><td>Sim</td></tr>
+        <tr><th>Armazenamento</th><td>128GB</td></tr>
+        <tr><th>Modelo</th><td>MPUF3BE/A
+
+<script>
+
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const btnMais = document.getElementById('increment');
+    const btnMenos = document.getElementById('decrement');
+    const inputQtd = document.getElementById('quantidade');
+
+    btnMais.addEventListener('click', () => {
+      inputQtd.value = parseInt(inputQtd.value) + 1;
+    });
+
+    btnMenos.addEventListener('click', () => {
+      if (parseInt(inputQtd.value) > 1) {
+        inputQtd.value = parseInt(inputQtd.value) - 1;
+      }
+    });
   });
 </script>
 
